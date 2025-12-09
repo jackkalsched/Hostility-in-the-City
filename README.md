@@ -1,12 +1,12 @@
 # Hostility in the City
 
-**Authors**: Jack Kalsched, Roxy Behjat
+**Authors**: Jack Kalsched, Roxana Behjat
 
 This is our final DSC80 project for the Fall '25 term.
 
 ## Project Website
 
-The project website is available at: [GitHub Pages URL - update this after publishing]
+The project website is available at: www.jackkalsched.github.io/hostility-in-the-city/
 
 ## Local Development
 
@@ -45,24 +45,6 @@ Before publishing, you need to export Plotly plots as HTML files:
 2. Place the HTML files in the `assets/plots/` directory:
    - `kde_prices.html` - KDE plot for electricity prices
    - `scatter_gsp_com.html` - Scatter plot of GSP vs Commercial Consumption
-
-## Publishing to GitHub Pages
-
-1. Push all files to your GitHub repository
-
-2. Go to your repository settings on GitHub
-
-3. Navigate to "Pages" in the left sidebar
-
-4. Under "Source", select "Deploy from a branch"
-
-5. Choose the branch (usually `main`) and folder (`/ (root)`)
-
-6. Click "Save"
-
-7. GitHub Pages will automatically build and deploy your site using Jekyll
-
-8. Your site will be available at: `https://[username].github.io/Hostility-in-the-City/`
 
 ## Project Structure
 
