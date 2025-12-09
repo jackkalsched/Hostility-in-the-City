@@ -1,0 +1,25 @@
+title: Hostility in the City
+description: A data science project analyzing power outages and intentional attacks
+author: Jack Kalsched, Roxy Behjat
+baseurl: "/Hostility-in-the-City"
+url: "https://jackkalsched.github.io"
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# GitHub Pages settings
+github: [username]
+repository: jackkalsched/Hostility-in-the-City
+
+# Exclude from processing
+exclude:
+  - README.md
+  - .gitignore
+  - __pycache__
+  - *.ipynb
+  - *.xlsx
+  - dsc80_utils.py
+  - template.ipynb
+  - messing_around.ipynb
+
