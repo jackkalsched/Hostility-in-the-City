@@ -94,11 +94,15 @@ We examined aggregate statistics to understand patterns in outage durations acro
 
 | Climate Region | Mean Duration | Std Duration | Count |
 |----------------|---------------|--------------|-------|
-| Cold | [Mean] | [Std] | [Count] |
-| Normal | [Mean] | [Std] | [Count] |
-| Warm | [Mean] | [Std] | [Count] |
-
-*Note: Actual values would be populated from the `df.groupby(['CLIMATE.REGION'])['OUTAGE.DURATION'].agg(['mean', 'std', 'count'])` operation in the notebook.*
+| Central | 2701.13 | 4308.40 | 191 |
+| East North Central | 5352.04 | 11984.45 | 137 |
+| Northeast | 2991.66 | 5228.24 | 344 |
+| Northwest | 1284.50 | 2768.51 | 122 |
+| South | 2846.10 | 5128.91 | 218 |
+| Southeast | 2217.69 | 3628.13 | 150 |
+| Southwest | 1566.14 | 7384.56 | 88 |
+| West | 1628.33 | 4709.06 | 205 |
+| West North Central | 696.56 | 2380.59 | 16 |
 
 This table shows that different climate regions experience outages of varying durations, which could be related to infrastructure resilience, weather patterns, or other regional factors.
 
@@ -112,7 +116,7 @@ We also examined whether intentional attacks happen at specific times of day. In
 
 We believe that the **`CUSTOMERS.AFFECTED`** column may be **NMAR (Not Missing At Random)**. 
 
-**Reasoning**: The number of customers affected by a power outage might not be reported for reasons that are directly related to the value itself. For instance, utility companies might be less likely to report customer impact data for very small outages (where the number might be considered insignificant) or for very large outages (where reporting might be delayed or avoided due to public relations concerns). The missingness mechanism is likely related to the unobserved value of `CUSTOMERS.AFFECTED` itself, making it NMAR.
+**Reasoning**: The number of customers affected by a power outage might not be reported for reasons that are directly related to the value itself. For instance, utility companies might be less likely to report customer impact data for very small outages (where the number might be considered insignificant) or for very large outages (where reporting might be delayed or avoided due to public relations concerns). The missingness mechanism is likely related to the unobserved value of `CUSTOMERS.AFFECTED` itself, making it NMAR. Additionally, we believe that `CUSTOMERS.AFFECTED` might not be reported for more rural areas, where the number of people living in the areas is unclear. 
 
 **Additional Data Needed**: To make this data MAR (Missing At Random), we would need information about the reporting policies of different utility companies, the size classification of outages, or whether there were any regulatory requirements for reporting customer impact data at the time of each outage.
 
@@ -138,7 +142,7 @@ We tested whether the missingness of `CUSTOMERS.AFFECTED` depends on `POPDEN_RUR
 - **Observed Difference**: -11.59
 - **P-value**: < 0.001 (approximately 0.0)
 
-**Conclusion**: This relationship is statistically significant! The p-value was less than 0.05, so we can conclude that `CUSTOMERS.AFFECTED` is **MAR (Missing At Random)** because its missingness is correlated with the rural population density of a state. States with lower rural population density are more likely to have missing `CUSTOMERS.AFFECTED` data.
+**Conclusion**: This relationship is statistically significant! The p-value was less than 0.05, so we can conclude that `CUSTOMERS.AFFECTED` is **MAR (Missing At Random)** because its missingness is correlated with the rural population density of a state. States with lower rural population density are more likely to have missing `CUSTOMERS.AFFECTED` data, as we originally hypothesized.
 
 ---
 
