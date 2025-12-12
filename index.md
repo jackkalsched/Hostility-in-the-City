@@ -9,7 +9,7 @@ title: Hostility in the City
 
 ---
 
-## Step 1: Introduction
+## Introduction
 
 The original dataset came in as one with **1534 rows** representing different power outages across the country, and **57 columns** representing different features including outage- and state-focused features.
 
@@ -37,7 +37,7 @@ The columns most relevant to our question include:
 
 ---
 
-## Step 2: EDA and Data Cleaning
+## EDA and Data Cleaning
 
 ### Data Cleaning
 
@@ -106,7 +106,7 @@ We also examined whether intentional attacks happen at specific times of day. In
 
 ---
 
-## Step 3: Assessment of Missingness
+## Assessment of Missingness
 
 ### NMAR Analysis
 
@@ -142,7 +142,7 @@ We tested whether the missingness of `CUSTOMERS.AFFECTED` depends on `POPDEN_RUR
 
 ---
 
-## Step 4: Hypothesis Testing
+## Hypothesis Testing
 
 ### Hypotheses
 
@@ -169,7 +169,7 @@ This finding suggests that attackers may view wealthier states as higher-value t
 
 ---
 
-## Step 5: Framing a Prediction Problem
+## Framing a Prediction Problem
 
 ### Prediction Problem
 
@@ -196,7 +196,7 @@ We only use features that would be known at the time we want to make a predictio
 
 ---
 
-## Step 6: Baseline Model
+## Baseline Model
 
 ### Model Description
 
@@ -230,7 +230,7 @@ The baseline model achieves reasonable performance with 85.8% accuracy. The reca
 
 ---
 
-## Step 7: Final Model
+## Final Model
 
 ### New Features Added
 
@@ -295,7 +295,7 @@ Outage duration was almost twice as important as any other feature in predicting
 
 ---
 
-## Step 8: Fairness Analysis
+## Fairness Analysis
 
 ### Groups Compared
 
